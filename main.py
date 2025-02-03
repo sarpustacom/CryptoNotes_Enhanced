@@ -65,13 +65,7 @@ def selectListBox(event):
     global selectedTitle
     selectedTitle = listBox.get(listBox.curselection()).strip()
 
-def getAll():
-    listBox.delete(0, tk.END)
-    listx = st_sqlite_manager.get_all_notes()
-    for (i, x) in enumerate(listx):
-        listBox.insert(i, x.title)
 
-getAll()
 
 selectedTitle = ""
 
@@ -108,6 +102,14 @@ listBox = tk.Listbox(window, height=10, width=40)
 listBox.pack()
 
 listBox.bind('<<ListboxSelect>>',selectListBox)
+
+def getAll():
+    listBox.delete(0, tk.END)
+    listx = st_sqlite_manager.get_all_notes()
+    for (i, x) in enumerate(listx):
+        listBox.insert(i, x.title)
+
+getAll()
 
 butEncrypt = tk.Button(text="Save & Encrypt", command=saveAndEncrypt)
 butEncrypt.pack()
