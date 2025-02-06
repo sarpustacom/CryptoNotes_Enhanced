@@ -1,5 +1,5 @@
 ## Crypto Notes Enhanced Edition
-Written by SarpTech, in 3.02.2025
+Written by Sarp Ünsal, in 3.02.2025
 
 ### Version 1.0
 * Initial version
